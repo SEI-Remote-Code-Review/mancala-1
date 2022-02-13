@@ -1,4 +1,4 @@
-console.log("Hello world")
+
 
 
 /*-------------------------------- Constants --------------------------------*/
@@ -7,69 +7,90 @@ console.log("Hello world")
 
 /*-------------------------------- Variables --------------------------------*/
 
-let totalMarbles = 24;
-let currentPlayer;
+
+
+let win, turn, winner, p1Manc, p2Manc, marbles
 let board= []
-let player1All= totalMarbles
-let player2All= totalMarbles
-let startIdx
-let endIdx
-let endRow
-let numMarbles
+
+
+
 
 /*------------------------ Cached Element References ------------------------*/
-const p1BankEl = document.querySelector('#mancala-2')
-const p2BankEl = document.querySelector('#mancala-1')
-const howToBtn = document.querySelector('#how-to')
-const resetBtn = document.querySelector('#reset')
-const holeEls = document.querySelectorAll('.hole')
+const holeElements = document.querySelectorAll('.hole')
+const p1MancEl = document.querySelector('#p1Manc')
+const p2MancEl = document.querySelector('#p2Manc')
+const howToBtn = document.getElementById('how-to')
+const resetBtn = document.getElementById('reset')
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-holeEls.forEach(function(hole) {
+holeElements.forEach(function(hole) {
   hole.addEventListener('click', handleClick)
 })
 
-holeEls.forEach(function(hole){
-  hole.addEventListener('mouseover', handleHover)
-})
+// holeElements.forEach(function(hole){
+//   hole.addEventListener('mouseover', handleHover)
+// })
 
-p1BankEl.addEventListener('mouseover', handleHover)
-p2BankEl.addEventListener('mouseover', handleHover)
+//p1MancEl.addEventListener('mouseover', handleHover)
+//p2MancEl.addEventListener('mouseover', handleHover)
 
 howToBtn.addEventListener('click', getList) 
 resetBtn.addEventListener('click', resetGame) //can happen anytime, not just when game complete
 
 /*-------------------------------- Functions --------------------------------*/
-//init();
+init();
 
 
 
 function init() {
-board = [4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 0] 
-
-//should the board have two separate arrays that return objects??
-
-turn = 1
-winner = null 
+  board = [4,4,4,4,4,4,0,4,4,4,4,4,4,0]
   
+  p1Manc=board[6]
+  p2Manc=board[13]
+  turn = 1
+  winner = null 
 }
 
 function render(){
-  holeEls.forEach(function(hole, idx)) {
+  console.log(board)
+  holeElements.forEach(function(hole) {
+    let holeElementIndex = hole.id.slice(4)
+    hole.textContent = board[holeElementIndex]
     
-  }
+  })
+  
 }
-
 function handleClick(evt){
-// for holeEls
+  let start = parseInt(evt.target.id.slice(4))
+  marbles = board[start]
+  board[start] = 0
+  
+  for (let i = 1; i <= marbles; i++) {
+    if ((start + i) > 13) {
+      start = 0 - i 
+      
+      }
+    board[start+i]++;
+  }
+  render();
 }
 
 
-function handleHover(evt){ //to show marble amount in hole
 
-}
+
+
+
+
+
+
+
+
+//function handleHover(evt){ //to show marble amount in hole
+
+//}
 
 function getList(evt){
 console.log("Instructions") //this works
