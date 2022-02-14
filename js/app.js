@@ -87,7 +87,7 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
       first++
     }
     if (turn === 2 && first+i === 6){
-      start++
+      first++
     }
     if ((first + i) > 13) {
       first = 0 - i 
