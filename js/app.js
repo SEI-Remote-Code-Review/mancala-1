@@ -97,12 +97,16 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
     currentIndex = first+i //what each index a marble is  distributed to
     //console.log(currentIndex)
   }
-  
+  switchTurn();
   render();
 }
 
 function switchTurn(){
-  
+  if (turn === 1){
+    turn++
+  }else {
+    turn--
+  }
 }
 
 function goAgain(){
@@ -111,7 +115,7 @@ function goAgain(){
 
 
 function absorb(){
-  
+
 }
 
 
@@ -132,4 +136,4 @@ console.log("Instructions") //this works
 
 function resetGame(evt){
   console.log("heard reset")
-}
+}``
