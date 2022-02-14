@@ -215,21 +215,35 @@ function absorb(){
 
 
 function getWinner(){
-  let p1Side = board.slice(0,6).reduce(function(a, b){
+  let rowP1 = board.slice(0,6).reduce(function(a, b){
     return a + b
   }, 0)
-  let p2Side = board.slice(7,13).reduce(function(a, b){
+    
+  
+    let rowP2 = board.slice(7,13).reduce(function(a, b){
     return a + b
   }, 0)
-  if (p1Side === 0 || p2Side === 0) {
+
+
+
+  if (rowP1 === 0 || rowP2 === 0) {
+    rowP1 += board[6]
+    rowP2 += board[13]
+    
+    board.splice(0,5,0,0,0,0,0,0)
+    board.splice(7,5,0,0,0,0,0,0)
+    board[6] = rowP1
+    board[13] = rowP2
+    render()
+
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
       winner = 0
-      alert(`it's a tie!`)
+      alert(`How in the world did you tie?`)
       return
     }
 
-    alert(`the winner is ${winner}!`)
+    alert(`How exciting!? The winner is Player ${winner}!`)
 
   }}
 
