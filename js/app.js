@@ -9,7 +9,7 @@
 
 
 
-let win, turn, winner, p1Manc, p2Manc, marbles
+let win, turn, winner, p1Manc, p2Manc, marbles, numMarbles, currentIndex
 let board= []
 
 
@@ -54,27 +54,36 @@ function init() {
   winner = null 
 }
 
-function render(){
-  console.log(board)
+function render(){ 
   holeElements.forEach(function(hole) {
     let holeElementIndex = hole.id.slice(4)
     hole.textContent = board[holeElementIndex]
     
   })
-  
 }
-function handleClick(evt){
-  let start = parseInt(evt.target.id.slice(4))
-  marbles = board[start]
-  board[start] = 0
-  
-  for (let i = 1; i <= marbles; i++) {
-    if ((start + i) > 13) {
-      start = 0 - i 
-      
-      }
-    board[start+i]++;
+
+function handleClick(evt){ //distributes marbles around the board from player1 perspective
+  let first = parseInt(evt.target.id.slice(4))
+  //setting up first play conditions to limit player 1 to index 0-5
+  if (first === 6 || first === 13){
+    return
   }
+  if (first > 5 && turn === 1) {
+    return
+  }
+  if (first < 6 && turn === 2) {
+    return
+  }
+  
+  marbles = board[first]
+  board[first] = 0
+  for (let i = 1; i <= marbles; i++) {
+    if ((first + i) > 13) {
+      first = 0 - i 
+      }
+    board[first+i]++;
+  }
+  changeTurn();
   render();
 }
 
