@@ -97,6 +97,7 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
     currentIndex = first+i //what each index a marble is  distributed to
     //console.log(currentIndex)
   }
+  goAgain();
   switchTurn();
   render();
 }
@@ -110,7 +111,13 @@ function switchTurn(){
 }
 
 function goAgain(){
-
+  if (turn === 1 && currentIndex === 6) {
+    turn++
+  }
+  if (turn === 2 && currentIndex === 13){
+    turn++
+  }
+  
 }
 
 
