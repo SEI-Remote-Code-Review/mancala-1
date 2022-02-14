@@ -101,7 +101,18 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
   render();
 }
 
+function switchTurn(){
+  
+}
 
+function goAgain(){
+
+}
+
+
+function absorb(){
+  
+}
 
 
 
