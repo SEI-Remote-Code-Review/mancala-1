@@ -97,6 +97,10 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
     currentIndex = first+i //what each index a marble is  distributed to
     //console.log(currentIndex)
   }
+  if (numMarbles===0){
+    absorb();
+  }
+  
   goAgain();
   switchTurn();
   render();
@@ -117,15 +121,71 @@ function goAgain(){
   if (turn === 2 && currentIndex === 13){
     turn++
   }
-  
 }
 
-
+//i would love to find a more concise code for this...
+//if it's player 1 turn and currentIndex(last marble) lands on an empty hole in 0-5 AND the opposite hole is full, combine those numbers into hole 6.
 function absorb(){
-
+  if (turn === 1) {
+    if (currentIndex === 0 && board[12] > 0) {
+      board[6] += (board[12]+board[0])
+      board[12] = 0
+      board[0] = 0
+    }else if (currentIndex === 1 && board[11] > 0) {
+      board[6] += (board[11]+board[1])
+      board[11] = 0
+      board[1] = 0
+    }else if (currentIndex === 2 && board[10] > 0) {
+      board[6] += (board[10]+board[2])
+      board[10] = 0
+      board[2] = 0
+    }else if (currentIndex === 3 && board[9] > 0) {
+      board[6] += (board[9]+board[3])
+      board[9] = 0
+      board[3] = 0
+    }else if (currentIndex === 4 && board[8] > 0) {
+      board[6] += (board[8]+board[4])
+      board[8] = 0
+      board[4] = 0
+    }else if (currentIndex === 5 && board[7] > 0) {
+      board[6] += (board[7]+board[5])
+      board[7] = 0
+      board[5] = 0
+    }
+  }
+//if it's player 2 turn and currentIndex(last marble) lands on an empty hole in 7-12 AND the opposite hole is full, combine those numbers into hole 13.
+  if (turn === 2) {
+    if (currentIndex === 12 && board[0] > 0) {
+      board[13] += (board[12]+board[0])
+      board[12] = 0
+      board[0] = 0
+    }else if (currentIndex === 11 && board[1] > 0) {
+      board[13] += (board[11]+board[1])
+      board[11] = 0
+      board[1] = 0
+    }else if (currentIndex === 10 && board[2] > 0) {
+      board[13] += (board[10]+board[2])
+      board[10] = 0
+      board[2] = 0
+    }else if (currentIndex === 9 && board[3] > 0) {
+      board[13] += (board[9]+board[3])
+      board[9] = 0
+      board[3] = 0
+    }else if (currentIndex === 8 && board[4] > 0) {
+      board[13] += (board[8]+board[4])
+      board[8] = 0
+      board[4] = 0
+    }else if (currentIndex === 7 && board[5] > 0) {
+      board[13] += (board[7]+board[5])
+      board[7] = 0
+      board[5] = 0
+    }
+  }
 }
 
+function getWinner(){
 
+}
 
 
 
