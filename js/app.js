@@ -64,26 +64,40 @@ function render(){
 
 function handleClick(evt){ //distributes marbles around the board from player1 perspective
   let first = parseInt(evt.target.id.slice(4))
-  //setting up first play conditions to limit player 1 to index 0-5
+  //setting up first play conditions to limit players to certain indexes
   if (first === 6 || first === 13){
+    //console.log('nononono')
     return
   }
   if (first > 5 && turn === 1) {
+    //console.log('nono')
     return
   }
   if (first < 6 && turn === 2) {
+    //console.log('no')
     return
   }
   
   marbles = board[first]
   board[first] = 0
   for (let i = 1; i <= marbles; i++) {
+    numMarbles = board[first+i]
+    //console.log(marbles)
+    if (turn === 1 && first+i === 13) {
+      first++
+    }
+    if (turn === 2 && first+i === 6){
+      start++
+    }
     if ((first + i) > 13) {
       first = 0 - i 
       }
-    board[first+i]++;
+    board[first+i]++
+      //console.log(numMarbles)
+    currentIndex = first+i //what each index a marble is  distributed to
+    //console.log(currentIndex)
   }
-  changeTurn();
+  
   render();
 }
 
