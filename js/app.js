@@ -104,7 +104,6 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
   goAgain();
   switchTurn();
   render();
-  //checkIfOver();
   getWinner();
 }
 
@@ -234,7 +233,7 @@ function getWinner(){
     board.splice(7,5,0,0,0,0,0,0)
     board[6] = rowP1
     board[13] = rowP2
-    render()
+    
 
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
@@ -242,9 +241,8 @@ function getWinner(){
       alert(`How in the world did you tie?`)
       return
     }
-
-    alert(`How exciting!? The winner is Player ${winner}!`)
-
+    render()
+    alert(`How exciting! The winner is Player ${winner}!`)
   }}
 
 
@@ -253,7 +251,7 @@ function getWinner(){
 
 //function handleHover(evt){ //to show marble amount in hole
 
-//}
+
 
 function getList(evt){
 console.log("Instructions") //this works
