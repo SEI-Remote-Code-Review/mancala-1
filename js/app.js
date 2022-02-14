@@ -104,6 +104,8 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
   goAgain();
   switchTurn();
   render();
+  //checkIfOver();
+  getWinner();
 }
 
 function switchTurn(){
@@ -183,11 +185,53 @@ function absorb(){
   }
 }
 
+// function checkIfOver(){
+//   if (player1Over() || player2Over()){
+//     getWinner();
+//   }
+// }
+
+// function player1Over(){
+//   for (let i = 0; i < board.length; i++){
+//     if (board[i] === 0 && board[i] < 6){
+//     return false
+//     }
+//   }
+//   return true;
+// }
+
+// function player2Over(){
+//   for (let i = 0; i < board.length; i++){
+//     if (board[i] === 7 && board[i] < 13){
+//     return false
+//     }
+//   }
+//   return true;
+// }
+
+
+
+
+
+
 function getWinner(){
+  let p1Side = board.slice(0,6).reduce(function(a, b){
+    return a + b
+  }, 0)
+  let p2Side = board.slice(7,13).reduce(function(a, b){
+    return a + b
+  }, 0)
+  if (p1Side === 0 || p2Side === 0) {
+    winner = board[6] > board[13] ? 1 : 2
+    if (board[6] === board[13]) {
+      winner = 0
+      alert(`it's a tie!`)
+      return
+    }
 
-}
+    alert(`the winner is ${winner}!`)
 
-
+  }}
 
 
 
@@ -203,4 +247,4 @@ console.log("Instructions") //this works
 
 function resetGame(evt){
   console.log("heard reset")
-}``
+}
