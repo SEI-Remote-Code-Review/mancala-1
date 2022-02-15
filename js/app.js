@@ -31,14 +31,14 @@ holeElements.forEach(function(hole) {
 })
 
 // holeElements.forEach(function(hole){
-//   hole.addEventListener('mouseover', handleHover)
+//   hole.addEventListener('mouseover', handleHover) 
 // })
 
 //p1MancEl.addEventListener('mouseover', handleHover)
 //p2MancEl.addEventListener('mouseover', handleHover)
 
 howToBtn.addEventListener('click', getList) 
-resetBtn.addEventListener('click', resetGame) //can happen anytime, not just when game complete
+resetBtn.addEventListener('click', init) //can happen anytime, not just when game complete
 
 /*-------------------------------- Functions --------------------------------*/
 init();
@@ -52,6 +52,7 @@ function init() {
   p2Manc=board[13]
   turn = 1
   winner = null 
+  render()
 }
 
 function render(){ 
@@ -257,6 +258,3 @@ function getList(evt){
 console.log("Instructions") //this works
 }
 
-function resetGame(evt){
-  console.log("heard reset")
-}
