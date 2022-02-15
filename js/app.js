@@ -17,8 +17,8 @@ let board= []
 
 /*------------------------ Cached Element References ------------------------*/
 const holeElements = document.querySelectorAll('.hole')
-const p1MancEl = document.querySelector('#p1Manc')
-const p2MancEl = document.querySelector('#p2Manc')
+const p1MancEl = document.querySelector('#hole6')
+const p2MancEl = document.querySelector('#hole13')
 const howToBtn = document.getElementById("howToButton")
 const resetBtn = document.getElementById('reset')
 

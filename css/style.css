@@ -47,28 +47,17 @@ h1 {
 
 
 
-#reset, #howToButton {
+#reset  {
   font-size: 1.3rem;
   text-align: center;
-
 }
 
 
 
+#howToButton {
+  font-size: 1.3rem;
+  text-align: center;
 
-
-
-
-.board {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px;
-  grid-template-areas:
-        "hole13 hole12 hole11 hole10 hole9 hole8 hole7 hole6"
-        "hole13 hole0 hole1 hole2 hole3 hole4 hole5 hole6";
 }
 
 .modal-body {
@@ -79,66 +68,105 @@ h1 {
   color: black;
 }
 
-#p1Manc {
-  grid-area: p1;
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#p2Manc {
-  grid-area: p2;
+
+
+
+main > div {
+  width: 95%;
+  height: 350px;
 }
 
-#hole0 {
-  grid-area: hole0;
+#player-1, #player-2 {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 50px;
+  
+  text-transform: uppercase;
+
 }
 
-#hole1 {
-  grid-area: hole1;
+
+#board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px red solid;
+
+
 }
 
-#hole2 {
-  grid-area: hole2;
+#board > div {
+  height: 100%;
 }
 
-#hole3 {
-  grid-area: hole3;
+
+
+#col-1, #col-3 {
+  width: 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px blue solid;
+  border-radius: 30%;
+
 }
 
-#hole4 {
-  grid-area: hole4;
+
+#col-2 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#hole5 {
-  grid-area: hole5;
+#row-1, #row-2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
 }
 
-#hole6 {
-  grid-area: hole6;
+#row-1 > div, #row-2 > div {
+  border: 1px black solid;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
 }
 
-#hole7 {
-  grid-area: hole7;
-}
 
-#hole8 {
-  grid-area: hole8;
-}
+#hole13 >, #hole6 {
+  height: 80%;
+  width: 80%;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
 
-#hole9 {
-  grid-area: hole9;
-}
-
-#hole10 {
-  grid-area: hole10;
-}
-
-#hole11 {
-  grid-area: hole11;
-}
-
-#hole12 {
-  grid-area: hole12;
-}
-
-#hole13 {
-  grid-area: hole13;
 }
