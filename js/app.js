@@ -19,7 +19,7 @@ let board= []
 const holeElements = document.querySelectorAll('.hole')
 const p1MancEl = document.querySelector('#p1Manc')
 const p2MancEl = document.querySelector('#p2Manc')
-const howToBtn = document.getElementById('how-to')
+const howToBtn = document.getElementById("howToButton")
 const resetBtn = document.getElementById('reset')
 
 
@@ -254,7 +254,7 @@ function getWinner(){
 
 
 
-function getList(evt){
+function getList(){
 console.log("Instructions") //this works
 }
 
