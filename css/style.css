@@ -82,7 +82,7 @@ main {
 
 
 main > div {
-  width: 95%;
+  width: 70%;
   height: 350px;
 }
 
@@ -91,17 +91,24 @@ main > div {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 50px;
   text-transform: uppercase;
-
 }
 
+#player-1 {
+  margin: 0 0 0 50px;
+}
+
+#player-2 {
+  margin: 50px;
+}
 
 #board {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px red solid;
+  background-image: url(https://c1.wallpaperflare.com/preview/867/831/679/tree-wood-texture-the-background.jpg);
+  border-radius: 30px;
 }
 
 #board > div {
@@ -119,6 +126,7 @@ main > div {
   position: relative;
   border: 1px blue solid;
   border-radius: 30%;
+  font-size: 30px;
 }
 
 
