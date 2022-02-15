@@ -47,8 +47,8 @@ h1 {
 
 
 
-#how-to, #reset {
-  font-size: 1.2rem;
+#button, #reset {
+  font-size: 1.3rem;
   text-align: center;
 
 }
@@ -69,6 +69,14 @@ h1 {
   grid-template-areas:
         "hole13 hole12 hole11 hole10 hole9 hole8 hole7 hole6"
         "hole13 hole0 hole1 hole2 hole3 hole4 hole5 hole6";
+}
+
+.modal-body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  color: black;
 }
 
 #p1Manc {

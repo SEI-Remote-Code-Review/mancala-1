@@ -32,8 +32,49 @@
 <body>
   <header>
     
-      
-        <div><button id = "how-to" class='btn btn-primary'>How Do I Play?</button></div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      What Are The Rules?
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mancala Game Rules</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <strong><h2>The Basics</h2></strong>
+            <ul>
+              <li>The game is played in a counter-clockwise fashion. 
+              </li>
+              <li>Each "pit" starts with FOUR marbles.</li>
+              <li>Each player posseses six "pits" and a "mancala". Player One's "mancala" is on the far right side of the board, while Player Two's "mancala" is on the far left side of the board.</li>
+              <li>Each player may only distribute marbles to THEIR OWN "mancala".</li>
+            </ul>
+            <strong><h2>Let's Start...</h2></strong>
+            <ul>
+              <li>A player chooses a "pit" to remove marbles from and then distributes them (to their right) one bye one, until the chosen "pit's" marbles are gone.</li>
+              <li>If a player passes their own "mancala", place a marble into it!</li>
+              <li>Keep in mind: a player may only remove marbles for play from their "pits", never their "mancala".</li>
+            </ul>
+            <strong><h2>Additional Rules</h2></strong>
+            <ul>
+              <li>If the last marble in a player's hand happens to land in their own "mancala", that player may take another turn. </li>
+              <li>If the last marble in a player's hand lands in THEIR OWN pit, and if that pit was empty, this player then steals all the marbles that are currently in their opponents pit on the opposite side of the board. </li>
+            </ul>
+            <strong><h2>Game Over</h2></strong>
+            <ul>
+              <li>The game is over when all of a player's pits are EMPTY. The opposing player will then move all of their remaining marbles to their own mancala. </li>
+              <li>Each player then total the marbles in thier mancalas. Whoever has the most marbles wins the game!</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
         <div><h1>MANCALA</h1></div>
         <div><button id = "reset" class='btn btn-primary'>Play Again</button></div>
       
