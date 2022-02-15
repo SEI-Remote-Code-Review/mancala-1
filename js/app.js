@@ -234,7 +234,7 @@ function getWinner(){
     board.splice(7,5,0,0,0,0,0,0)
     board[6] = rowP1
     board[13] = rowP2
-    
+    render()
 
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
@@ -242,7 +242,7 @@ function getWinner(){
       alert(`How in the world did you tie?`)
       return
     }
-    render()
+    
     alert(`How exciting! The winner is Player ${winner}!`)
   }}
 
