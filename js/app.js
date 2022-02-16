@@ -79,6 +79,9 @@ function render(){
 function handleClick(evt){ //distributes marbles around the board from player1 perspective
   let first = parseInt(evt.target.id.slice(4))
   //setting up first play conditions to limit players to certain indexes
+  if (board[first]===0){
+    return 
+  }
   if (first === 6 || first === 13){
     //console.log('nononono')
     return
