@@ -80,7 +80,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 20px rgba(0, 0, 0, 0.63) solid;
+  
 }
 
 
@@ -108,8 +108,9 @@ main > div {
   align-items: center;
   
 
-  background-image: url("https://www.123rf.com/photo_10615589_old-wooden-board-background.html");
-  border-radius: 30px;
+  background-image: url(https://cdn3.photostockeditor.com/c/0711/tree-nature-abstract-board-wood-antique-image.jpg);
+  border: 20px rgba(0, 0, 0, 0.63) solid;
+  
 }
 
 #board > div {
@@ -120,7 +121,8 @@ main > div {
 
 
 #col-1, #col-3 {
-  width: 15%;
+  width: 10%;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
