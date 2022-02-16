@@ -63,19 +63,17 @@ function render(){
   holeElements.forEach(function(hole) {
     let holeElementIndex = hole.id.slice(4)
     hole.textContent = board[holeElementIndex]
-    
-    if (turn===1) {
-      color1.style.color="silver"
-    }else {
-      color1.style.color="black"
-    }
-    if (turn===2) {
-      color2.style.color="silver"
-    }else {
-      color2.style.color="black"
-    }
   })
-
+  if (turn===1) {
+    color1.style.color="#6D2C31"
+  }else {
+    color1.style.color="black"
+  }
+  if (turn===2) {
+    color2.style.color="#FFB94F"
+  }else {
+    color2.style.color="black"
+  }
 }
 
 function handleClick(evt){ //distributes marbles around the board from player1 perspective
