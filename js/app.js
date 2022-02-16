@@ -40,6 +40,7 @@ holeElements.forEach(function(hole) {
 howToBtn.addEventListener('click', getList) 
 resetBtn.addEventListener('click', init) //can happen anytime, not just when game complete
 
+
 /*-------------------------------- Functions --------------------------------*/
 init();
 
@@ -53,6 +54,7 @@ function init() {
   turn = 1
   winner = null 
   render()
+  changeColor()
 }
 
 function render(){ 
@@ -103,6 +105,7 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
   }
   
   goAgain();
+  
   switchTurn();
   render();
   getWinner();
@@ -114,7 +117,21 @@ function switchTurn(){
   }else {
     turn--
   }
+  changeColor()
 }
+
+function changeColor() {
+  if (turn === 1){
+    document.getElementById('player-1').style.color= "silver"
+  } else (turn === 2) 
+    document.getElementById('player-1').style.color= "silver"
+} 
+  
+  
+
+    
+  
+
 
 function goAgain(){
   if (turn === 1 && currentIndex === 6) {

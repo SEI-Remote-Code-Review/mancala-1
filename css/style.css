@@ -28,12 +28,13 @@ body {
 
 header {
   display: flex;
-  background-color: rgb(53, 20, 49);
+  background-color: rgba(53, 20, 49, 0.726);
   color: rgb(189, 198, 150);
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px; 
+  border: 20px rgba(0, 0, 0, 0.178) solid;
 }
 
 
@@ -79,6 +80,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 20px rgba(0, 0, 0, 0.63) solid;
 }
 
 
@@ -92,19 +94,13 @@ main > div {
 #player-1, #player-2 {
   height: 100px;
   display: flex;
-  
-  
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
+  font-size: 20px;
 }
 
-#player-1 {
-  
-}
 
-#player-2 {
-  justify-content: right;
-  margin: 10px 10px 10px 10px;
-}
 
 #board {
   display: flex;
