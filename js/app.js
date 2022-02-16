@@ -3,7 +3,7 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
-
+const chimes = new Audio('./audio/chimes.wav')
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -98,6 +98,7 @@ function handleClick(evt){ //distributes marbles around the board from player1 p
   marbles = board[first]
   board[first] = 0
   for (let i = 1; i <= marbles; i++) {
+    chimes.play()
     numMarbles = board[first+i]
     //console.log(marbles)
     if (turn === 1 && first+i === 13) {
