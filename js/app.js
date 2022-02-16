@@ -22,6 +22,8 @@ const p2MancEl = document.querySelector('#hole13')
 const howToBtn = document.getElementById("howToButton")
 const resetBtn = document.getElementById('reset')
 
+const color1= document.getElementById('player-1')
+const color2 = document.getElementById('player-2')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -54,7 +56,7 @@ function init() {
   turn = 1
   winner = null 
   render()
-  changeColor()
+  
 }
 
 function render(){ 
@@ -62,7 +64,18 @@ function render(){
     let holeElementIndex = hole.id.slice(4)
     hole.textContent = board[holeElementIndex]
     
+    if (turn===1) {
+      color1.style.color="silver"
+    }else {
+      color1.style.color="black"
+    }
+    if (turn===2) {
+      color2.style.color="silver"
+    }else {
+      color2.style.color="black"
+    }
   })
+
 }
 
 function handleClick(evt){ //distributes marbles around the board from player1 perspective
@@ -117,15 +130,10 @@ function switchTurn(){
   }else {
     turn--
   }
-  changeColor()
+  
 }
 
-function changeColor() {
-  if (turn === 1){
-    document.getElementById('player-1').style.color= "silver"
-  } else (turn === 2) 
-    document.getElementById('player-1').style.color= "silver"
-} 
+
   
   
 

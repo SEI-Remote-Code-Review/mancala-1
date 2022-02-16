@@ -28,13 +28,13 @@ body {
 
 header {
   display: flex;
-  background-color: rgba(53, 20, 49, 0.726);
-  color: rgb(189, 198, 150);
+  background-color: rgba(6, 34, 58, 0.726);
+  color: rgb(124, 119, 50);
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px; 
-  border: 20px rgba(0, 0, 0, 0.178) solid;
+  
 }
 
 
@@ -51,7 +51,7 @@ h1 {
 #reset  {
   font-size: 1.3rem;
   text-align: center;
-  background-color:  rgb(189, 198, 150);
+  background-color:  rgb(151, 146, 75);
 }
 
 
@@ -59,7 +59,7 @@ h1 {
 #howToButton {
   font-size: 1.3rem;
   text-align: center;
-  background-color:  rgb(189, 198, 150);
+  background-color:  rgb(151, 146, 75);
   
 
 }
@@ -108,7 +108,7 @@ main > div {
   align-items: center;
   
 
-  background-image: url(https://c1.wallpaperflare.com/preview/867/831/679/tree-wood-texture-the-background.jpg);
+  background-image: url("https://www.123rf.com/photo_10615589_old-wooden-board-background.html");
   border-radius: 30px;
 }
 
@@ -132,6 +132,13 @@ main > div {
   
 }
 
+#col-1 {
+  background-color: rgba(189, 198, 150, 0.425);
+}
+
+#col-3 {
+  background-color: rgba(47, 105, 156, 0.425);
+}
 
 
 #col-2 {
@@ -161,15 +168,18 @@ main > div {
   text-align: center;
   font-size: 30px;
   border-radius: 50%;
-  
-
-  
-
   position: relative;
   margin: 10px;
   box-sizing: border-box;
 }
 
+#row-1 > div {
+  background-color: rgba(189, 198, 150, 0.425);
+}
+
+#row-2 > div {
+  background-color: rgba(47, 105, 156, 0.425);
+}
 
 
 #hole13 >, #hole6 {
