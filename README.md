@@ -1,6 +1,6 @@
 
 # **Mancala**
----
+
 
 
 This is a browser-based game of Mancala blah blah...
@@ -30,7 +30,7 @@ As the game continues, marbles begin to pile up in each hole. Right now, I have 
 
 
 ## Technologies Used
--------------
+
 ### HTML
 ### CSS:
 - Images
