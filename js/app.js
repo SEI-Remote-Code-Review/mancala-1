@@ -106,8 +106,12 @@ function handleClick(evt){
 function switchTurn() {
   if (turn === 1) {
     turn++
+    color2.classList.add('animate__animated', 'animate__fadeIn')
+    color1.classList.remove('animate__animated', 'animate__fadeIn')
   } else {
     turn--
+    color1.classList.add('animate__animated', 'animate__fadeIn')
+    color2.classList.remove('animate__animated', 'animate__fadeIn')
   }
 }
 
