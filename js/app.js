@@ -45,9 +45,20 @@ function init() {
 
 function render(){ 
   holeElements.forEach(function(hole) {
+    hole.innerHTML= ''
     let holeElementIndex = hole.id.slice(4)
-    hole.textContent = board[holeElementIndex]
+    let stoneCount = board[holeElementIndex]
+    if (stoneCount>8){
+      stoneCount=8
+    }
+    for (i=0; i <stoneCount; i++) {
+    const stoneElement = document.createElement('div')
+    stoneElement.className = 'stone'
+    hole.appendChild(stoneElement)
+
+    }
   })
+  
   if (turn === 1) {
     color1.style.color="rgb(100, 13, 21)"
   } else {
@@ -62,6 +73,17 @@ function render(){
 
 function handleClick(evt){ 
   let first = parseInt(evt.target.id.slice(4))
+  console.log(evt)
+
+  if (isNaN(first)) {
+    const parent = evt.target.parentNode
+    first = parseInt(parent.id.slice(4))
+
+  }
+
+  
+  console.log(parent)
+  console.log(first)
   
   if (board[first] === 0){
     return 

@@ -142,11 +142,21 @@ main {
 }
 
 #row1 > div, #row2 > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   border: 8px rgba(0, 0, 0, 0.521) solid;
   height: 120px;
   width: 120px;
-  text-align: center;
-  font-size: 30px;
   border-radius: 50%;
   margin: 10px;
+}
+
+.stone {
+  width: 30%;
+  height: 30%;
+  border: 1px black solid;
+  border-radius: 50%;
 }
