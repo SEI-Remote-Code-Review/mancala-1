@@ -108,7 +108,6 @@ main {
   
 }
 
-
 #column1 {
   background-color: #ffb94f56;
 }
@@ -124,8 +123,6 @@ main {
 #column3 {
   background-color: #6d2c3156;
 }
-
-
 
 #row1, #row2 {
   width: 100%;
@@ -157,8 +154,6 @@ main {
   border-radius: 50%;
   margin: 10px;
 }
-
-
 
 #hole6 {
   display: flex;

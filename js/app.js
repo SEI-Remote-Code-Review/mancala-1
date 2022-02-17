@@ -16,24 +16,14 @@ const color2 = document.getElementById('player2')
 
 const tooltipTriggerCount = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 const tooltipCount = tooltipTriggerCount.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)})
-
-
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
 /*----------------------------- Event Listeners -----------------------------*/
 
 holeElements.forEach(function(hole) {
   hole.addEventListener('click', handleClick)
 })
-
-// holeElements.forEach(function(hole){
-//   hole.addEventListener('mouseover', handleHover) 
-// })
-
-//p1MancEl.addEventListener('mouseover', handleHover)
-//p2MancEl.addEventListener('mouseover', handleHover)
-
 resetBtn.addEventListener('click', init) 
-
 
 /*-------------------------------- Functions --------------------------------*/
 init();
@@ -49,23 +39,19 @@ function init() {
 
 function render(){ 
   holeElements.forEach(function(hole) {
-    hole.innerHTML= ''
-    let holeElementIndex = hole.id.slice(4)
-    let stoneCount = board[holeElementIndex]
-    hole.setAttribute("data-bs-original-title", stoneCount)
-  
-    if (stoneCount>8){
+  hole.innerHTML= ''
+  let holeElementIndex = hole.id.slice(4)
+  let stoneCount = board[holeElementIndex]
+  hole.setAttribute("data-bs-original-title", stoneCount)
+  if (stoneCount>8){
       stoneCount=8
-    }
-    for (i=0; i <stoneCount; i++) {
+}
+  for (i=0; i <stoneCount; i++) {
     const stoneElement = document.createElement('div')
     stoneElement.className = 'stone'
     hole.appendChild(stoneElement)
-    
-    }
-
-  })
-  
+  }
+})
   if (turn === 1) {
     color1.style.color="rgb(100, 13, 21)"
   } else {
@@ -80,18 +66,11 @@ function render(){
 
 function handleClick(evt){ 
   let first = parseInt(evt.target.id.slice(4))
-  console.log(evt)
 
   if (isNaN(first)) {
     const parent = evt.target.parentNode
     first = parseInt(parent.id.slice(4))
-
   }
-
-  
-  console.log(parent)
-  console.log(first)
-  
   if (board[first] === 0){
     return 
   }
@@ -153,8 +132,6 @@ function goAgain() {
   }
 }
 
-//i would love to find a more concise code for this...
-//if it's player 1 turn and currentIndex(last marble) lands on an empty hole in 0-5 AND the opposite hole is full, combine those numbers into hole 6.
 function absorb(){
   if (turn === 1) {
     if (currentIndex === 0 && board[12] > 0) {
@@ -183,7 +160,7 @@ function absorb(){
       board[5] = 0
     }
   }
-//if it's player 2 turn and currentIndex(last marble) lands on an empty hole in 7-12 AND the opposite hole is full, combine those numbers into hole 13.
+
   if (turn === 2) {
     if (currentIndex === 12 && board[0] > 0) {
       board[13] += (board[12]+board[0])
@@ -239,13 +216,3 @@ if (rowP1 === 0 || rowP2 === 0) {
     alert(`How exciting! The winner is Player ${winner}!`)
   }
 }
-
-
-
-
-
-//function handleHover(evt){ //to show marble amount in hole
-
-
-
-
