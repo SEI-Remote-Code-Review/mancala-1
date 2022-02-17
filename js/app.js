@@ -8,11 +8,15 @@ let board= []
 /*------------------------ Cached Element References ------------------------*/
 const holeElements = document.querySelectorAll('.hole')
 const p1MancEl = document.querySelector('#hole6')
-const p2MancEl = document.querySelector('#hole13')
+const p2MancEl = document.querySelector('.hole13')
 const howToBtn = document.getElementById("howToButton")
 const resetBtn = document.getElementById('reset')
 const color1 = document.getElementById('player1')
 const color2 = document.getElementById('player2')
+
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)})
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -48,6 +52,8 @@ function render(){
     hole.innerHTML= ''
     let holeElementIndex = hole.id.slice(4)
     let stoneCount = board[holeElementIndex]
+    hole.setAttribute("data-bs-original-title", stoneCount)
+  
     if (stoneCount>8){
       stoneCount=8
     }
@@ -55,8 +61,9 @@ function render(){
     const stoneElement = document.createElement('div')
     stoneElement.className = 'stone'
     hole.appendChild(stoneElement)
-
+    
     }
+
   })
   
   if (turn === 1) {
