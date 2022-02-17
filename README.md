@@ -14,7 +14,8 @@ Here is a link to my deployed game:
 <https://ndrewgallup.github.io/mancala/>
 
 ## The Process
-Something that makes Mancala so meditative is the physical act of distibuting marbles one-by-one. This provides a sense of tempo and rhythm that I feel is lost in a browser based version. Therefore, I would like to add an animation with specific time intervals to actually accomplish "seeing" the marbles move one-by-one, rather than an instant movement on a click. 
+
+- include pictures of wireframe/describe process/etc.
 
 
 ## Next Steps
