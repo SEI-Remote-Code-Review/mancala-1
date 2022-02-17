@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #63595C;
+  background-color: #726f6f;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -94,7 +94,7 @@ main > div {
   height: 350px;
 }
 
-#player-1, #player-2 {
+#player1, #player2 {
   font-family: 'Syne Tactile', cursive;
   height: 100px;
   display: flex;
@@ -125,7 +125,7 @@ main > div {
 
 
 
-#col-1, #col-3 {
+#column1, #column3 {
   width: 10%;
   display: flex;
   flex-direction: column;
@@ -138,16 +138,16 @@ main > div {
   
 }
 
-#col-1 {
+#column1 {
   background-color: #ffb94f56;
 }
 
-#col-3 {
+#column3 {
   background-color: #6d2c3156;
 }
 
 
-#col-2 {
+#column2 {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -158,7 +158,7 @@ main > div {
 
 
 
-#row-1, #row-2 {
+#row1, #row2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -167,7 +167,7 @@ main > div {
   
 }
 
-#row-1 > div, #row-2 > div {
+#row1 > div, #row2 > div {
   border: 8px rgba(0, 0, 0, 0.521) solid;
   height: 120px;
   width: 120px;
@@ -179,11 +179,11 @@ main > div {
   box-sizing: border-box;
 }
 
-#row-1 > div {
+#row1 > div {
   background-color: #FFB94f56;
 }
 
-#row-2 > div {
+#row2 > div {
   background-color: #6d2c3156;
 }
 

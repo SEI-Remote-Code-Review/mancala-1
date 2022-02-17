@@ -22,8 +22,10 @@ const p2MancEl = document.querySelector('#hole13')
 const howToBtn = document.getElementById("howToButton")
 const resetBtn = document.getElementById('reset')
 
-const color1= document.getElementById('player-1')
-const color2 = document.getElementById('player-2')
+
+
+const color1= document.getElementById('player1')
+const color2 = document.getElementById('player2')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -65,7 +67,7 @@ function render(){
     hole.textContent = board[holeElementIndex]
   })
   if (turn===1) {
-    color1.style.color="#6D2C31"
+    color1.style.color="rgb(100, 13, 21)"
   }else {
     color1.style.color="black"
   }
