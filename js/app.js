@@ -14,8 +14,8 @@ const resetBtn = document.getElementById('reset')
 const color1 = document.getElementById('player1')
 const color2 = document.getElementById('player2')
 
-const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+const tooltipTriggerCount = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipCount = tooltipTriggerCount.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)})
 
 
