@@ -1,9 +1,10 @@
 
 # **Mancala**
 
+---
+![]("/assets/../../assets/Mancala%20Game.png)
 
-
-This is a browser-based game of Mancala blah blah...
+This is a browser-based game of Mancala. I decided to build this game because it reminded me of my time spent living in Alaska- fall colors, mountains, stained glass windows, and MANCALA. 
 
 ## Check It Out
 
@@ -13,49 +14,32 @@ Here is a link to my deployed game:
 
 <https://ndrewgallup.github.io/mancala/>
 
-## The Process
-
-- include pictures of wireframe/describe process/etc.
-
 
 ## Next Steps
 
-### Marble Animation:
+### Marble Work
+- Have four differently colored marbles that randomly place themselves.
 
-Something that makes Mancala so meditative is the physical act of distibuting marbles one-by-one. This provides a sense of tempo and rhythm that I feel is lost in a browser based version. Therefore, I would like to add an animation with specific time intervals to actually accomplish "seeing" the marbles move one-by-one, rather than an instant movement on a click. 
+- Add an animation with specific time intervals to actually accomplish "seeing" the marbles move one-by-one, rather than an instant movement on a click. 
 
-### Marble Layers:
-As the game continues, marbles begin to pile up in each hole. Right now, I have the physical representaion of marbles capped off at eight. So I would like to write some code that allows for the marbles to "layer" after a certain amount are in each hole. 
+- Allow for the marbles to "layer" after a certain amount are in each hole. 
 
+### Browser Compatibility
+- Implement support for smartphone/tablet game play
+- Responsiveness to browser size changes
 
+### Misc.
+- A nicer win modal
 
 
 ## Technologies Used
 
-### HTML
-### CSS:
-- Images
-- Animations
-- Font Families
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 
-### JQuery/JavaScript:
-#### Event Listeners:
-
-- Modal window
-- Reset board
-- Holes
-
-#### Event Handlers:
-
-- Moving all the marbles
-
-#### Functions:
-- Determine a winner
-- Absorbing opponent marbles
-- Provide conditional extra turns
-- Switching turns
-- Game play
 
 
 

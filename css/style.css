@@ -104,8 +104,6 @@ main {
   align-content: center;
   border: 8px rgba(0, 0, 0, 0.521) solid;
   border-radius: 30%;
-  
-  
 }
 
 #column1 {
@@ -130,12 +128,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 #row1 > div {
   background-color: #FFB94f56;
-  
 }
 
 #row2 > div {
@@ -176,6 +172,6 @@ main {
 .stone {
   width: 30%;
   height: 30%;
-  border: 3px rgba(0, 0, 0, 0.548) solid;
   border-radius: 50%;
+  background-image: url(https://i.etsystatic.com/8751402/r/il/11a76f/1891280176/il_1588xN.1891280176_qway.jpg);
 }
