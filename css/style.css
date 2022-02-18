@@ -36,7 +36,7 @@ header {
 
 h1 {
   font-family: 'Syne Tactile', cursive;
-  font-size: 12rem;
+  font-size: 14rem;
   margin: 10px 100px;
   font-weight: normal;
   text-align: center;
@@ -170,8 +170,8 @@ main {
 }
 
 .stone {
-  width: 30%;
-  height: 30%;
+  width: 35%;
+  height: 35%;
   border-radius: 50%;
   background-image: url(https://i.etsystatic.com/8751402/r/il/11a76f/1891280176/il_1588xN.1891280176_qway.jpg);
 }

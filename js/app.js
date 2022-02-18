@@ -43,8 +43,8 @@ function render(){
   let holeElementIndex = hole.id.slice(4)
   let stoneCount = board[holeElementIndex]
   hole.setAttribute("data-bs-original-title", stoneCount)
-  if (stoneCount>8){
-      stoneCount=8
+  if (stoneCount>5){
+      stoneCount=5
 }
   for (i=0; i <stoneCount; i++) {
     const stoneElement = document.createElement('div')

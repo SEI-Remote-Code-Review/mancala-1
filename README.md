@@ -2,7 +2,7 @@
 # **Mancala**
 
 ---
-![]("/assets/../../assets/Mancala%20Game.png)
+![]("/../images/Mancala%20Game.png)
 
 This is a browser-based game of Mancala. I decided to build this game because it reminded me of my time spent living in Alaska- fall colors, mountains, stained glass windows, and MANCALA. 
 
