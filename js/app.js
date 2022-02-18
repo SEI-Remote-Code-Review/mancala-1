@@ -18,6 +18,7 @@ const tooltipTriggerCount = [].slice.call(document.querySelectorAll('[data-bs-to
 const tooltipCount = tooltipTriggerCount.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
   })
+  
 /*----------------------------- Event Listeners -----------------------------*/
 
 holeElements.forEach(function(hole) {
