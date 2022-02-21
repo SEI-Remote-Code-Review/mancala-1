@@ -1,0 +1,177 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #726f6f;
+  /* Use a system font, if none are available use an available sans-sarif font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-color:rgb(18, 46, 59);
+  color: rgb(160, 157, 157);
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Syne Tactile', cursive;
+  font-size: 14rem;
+  margin: 10px 100px;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#reset  {
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: rgb(160, 157, 157);
+}
+
+#howToButton {
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: rgb(160, 157, 157);
+}
+
+.modal-body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+#player1, #player2 {
+  font-family: 'Syne Tactile', cursive;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://cdn3.photostockeditor.com/c/0711/tree-nature-abstract-board-wood-antique-image.jpg);
+  border: 15px rgb(18, 46, 59) solid;
+  width: 100%;
+  height: 350px;
+}
+
+#board > div {
+  height: 90%;
+}
+
+#column1, #column3 {
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 8px rgba(0, 0, 0, 0.521) solid;
+  border-radius: 30%;
+}
+
+#column1 {
+  background-color: #ffb94f56;
+}
+
+#column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72%;
+}
+
+#column3 {
+  background-color: #6d2c3156;
+}
+
+#row1, #row2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#row1 > div {
+  background-color: #FFB94f56;
+}
+
+#row2 > div {
+  background-color: #6d2c3156;
+}
+
+#row1 > div, #row2 > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 8px rgba(0, 0, 0, 0.521) solid;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+#hole6 {
+  display: flex;
+  width: 80%;
+  height: 40%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#hole13 {
+  display: flex;
+  width: 80%;
+  height: 40%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.stone {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  background-image: url(https://i.etsystatic.com/8751402/r/il/11a76f/1891280176/il_1588xN.1891280176_qway.jpg);
+}
